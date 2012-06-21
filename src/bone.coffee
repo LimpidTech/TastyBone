@@ -23,7 +23,7 @@ class Bone
                                                   endpoint.list_endpoint
 
         @models[capitalizedName + 'Model'] = model
-        @collections[capitalizedName + 'Collection'] = _collection
+        @collections[capitalizedName + 'Collection'] = collection
 
       @.trigger 'ready', @
 
