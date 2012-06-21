@@ -3,6 +3,22 @@ TastyBone
 
 Expose TastyPie to your client. Nicely.
 
+Dependencies
+------------
+
+Before including this script, make sure that you have included the following
+scripts in your document. Without them, this thing is going to misbehave like
+you wouldn't believe!
+
+- jQuery
+- underscore.js
+- backbone.js
+
+Note that I did not introduce any of these dependencies (aside from the obvious
+backbone.js dependency). These are all dependencies required by any site using
+backbone.js to grab data over AJAX - which is exactly what we need for
+TastyBone.
+
 How does it work?
 -----------------
 
@@ -34,3 +50,31 @@ collection of user models as such:
 			}
 		});
 	};
+
+Django support
+--------------
+
+TastyBone is already in pip, and provides a super simple app that will append
+tastybone.js and tastybone.min.js to your static files. Simply install
+tastybone from pypi with your favorite frontend. Here's how it looks with pip:
+
+	pip install tastybone
+
+After this is done installing, append the tastybone module to your
+INSTALLED_APPS setting:
+
+	INSTALLED_APPS = (
+		# All of your other awesomely fancy apps here.
+		'tastybone',
+	)
+
+Now, (after having run `manage.py collectstatic` if necessary) you should be
+able to access *tastybone.js* or *tastybone.min.js* under your STATIC_URL. For
+instance, if STATIC_URL is equal to '/static/' then you'd find the script here:
+
+	<script src="/static/scripts/tastypie.min.js"></script>
+
+Things that still need done
+---------------------------
+
+- Proper authentication/authorization support for TastyPie's built-in types.
