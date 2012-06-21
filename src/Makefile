@@ -10,7 +10,7 @@ base_filename = $(output_directory)/tastybone
 output_filename = $(call append_extension,$(base_filename),js)
 output_filename_minified = $(call append_extension,$(base_filename),min.js)
 
-objects = bone.js models.js collections.js test.js
+objects = bone.js models.js collections.js
 
 all: $(output_filename_minified)
 
