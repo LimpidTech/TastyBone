@@ -10,7 +10,7 @@ base_filename = $(output_directory)/tastybone
 output_filename = $(call append_extension,$(base_filename),js)
 output_filename_minified = $(call append_extension,$(base_filename),min.js)
 
-objects = $(patsubst %.coffee, %.js, ${wildard *.coffee})
+objects = $(patsubst %.coffee,%.js,$(wildcard *.coffee))
 
 all: $(output_filename_minified)
 
