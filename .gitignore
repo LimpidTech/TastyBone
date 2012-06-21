@@ -31,6 +31,9 @@ pip-log.txt
 #Mr Developer
 .mr.developer.cfg
 
+# IDE-Specific ignores
+*.swp
+
 # Hidden files that aren't git-related
 .*
 !.gitslave
