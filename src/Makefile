@@ -15,7 +15,7 @@ objects = main.js
 all: $(output_filename_minified)
 
 $(output_filename_minified): $(output_filename)
-	${MINIFIER} ${output_filename} > ${output_filename_minified}
+	${MINIFIER} ${output_filename} > $@
 
 $(output_filename): $(objects) $(output_directory)
 	$(CONCAT) $(objects) > $(output_filename)
