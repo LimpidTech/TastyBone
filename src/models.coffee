@@ -1,6 +1,10 @@
 class TastyPieModel extends Backbone.Model
+  # TODO: Figure out how to make an ID into just an id. Not the entire URI.
+  idAttribute: 'resource_uri'
+
   url: ->
-    # It seems that TastyPie really likes leading slahes. This is a bad thing.
+    if @id then return @id
+
     url = Backbone.Model.prototype.url.call @
 
     if url[url.length-1] != '/'
