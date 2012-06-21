@@ -1,6 +1,6 @@
-CC=coffee
-CONCAT=cat
-MINIFIER=uglifyjs
+cc=coffee
+concat=cat
+minifier=uglifyjs
 
 append_extension = $1.$2
 
@@ -15,10 +15,10 @@ objects = main.js
 all: $(output_filename_minified)
 
 $(output_filename_minified): $(output_filename)
-	${MINIFIER} ${output_filename} > $@
+	${minifier} ${output_filename} > $@
 
 $(output_filename): $(objects) $(output_directory)
-	$(CONCAT) $(objects) > $(output_filename)
+	$(concat) $(objects) > $(output_filename)
 
 $(objects): %.js: %.coffee 
 	coffee -c $<
