@@ -2,6 +2,7 @@ window.TastyBone = {}
 TastyBone = window.TastyBone
 
 class Bone
+  models: {}
   collections: {}
 
   constructor: (@original_url, options) ->
@@ -18,10 +19,11 @@ class Bone
         capitalizedName = name[0].toUpperCase() + name.slice(1)
         model = TastyBone.Model.factory endpoint.list_endpoint, @
 
-        next_collection = TastyBone.Collection.factory model,
-                                                      endpoint.list_endpoint
+        collection = TastyBone.Collection.factory model,
+                                                  endpoint.list_endpoint
 
-        @collections[capitalizedName + 'Collection'] = next_collection
+        @models[capitalizedName + 'Model'] = model
+        @collections[capitalizedName + 'Collection'] = _collection
 
       @.trigger 'ready', @
 
