@@ -22,9 +22,6 @@ for filename in metafiles:
 	except IOError:
 		pass
 
-# No dependancies :)
-dependancies = []
-
 metadata = {
 	'name': 'tastybone',
 	'version': '0.0.1',
@@ -36,8 +33,6 @@ metadata = {
 	'url': 'http://github.com/LimpidTech/TastyBone',
 	'keywords': 'django tastypie',
 	'packages': ['tastybone'],
-	'install_requires': dependancies,
-	'tests_require': dependancies,
 }
 
 setup(**metadata)
