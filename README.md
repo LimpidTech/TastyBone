@@ -35,7 +35,7 @@ these endpoints are found, the bone object will fire a ready event.
 So, if you had exposed a User resource at /api/v1/user/ - you could get a
 collection of user models as such:
 
-	bone = new TastyBone.Bone('/api/v1');
+	bone = new TastyBone.Bone('/api/v1/');
 
 	bone.on('ready', function get_collections() {
 		users = new bone.collections.UserCollection();
