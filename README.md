@@ -24,7 +24,7 @@ collection of user models as such:
 	bone.on('ready', function get_collections() {
 		users = new bone.collections.UserCollection();
 
-		.fetch({
+		users.fetch({
 			'success': function get_users(response) {
 				// Hooray! We found our users.
 				console.dir(response);
