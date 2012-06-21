@@ -33,6 +33,12 @@ metadata = {
 	'url': 'http://github.com/LimpidTech/TastyBone',
 	'keywords': 'django tastypie',
 	'packages': ['tastybone'],
+    'package_data': {
+        'tastybone': [
+            'static/scripts/tastybone.js',
+            'static/scripts/tastybone.min.js',
+        ]
+    }
 }
 
 setup(**metadata)
