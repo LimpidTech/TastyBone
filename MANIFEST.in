@@ -1,2 +1,2 @@
-include README.md CHANGES.md CLASSIFIERS.txt
+include README.md CHANGES.md CLASSIFIERS.txt MANIFEST.in
 
