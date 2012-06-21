@@ -3,14 +3,9 @@ class TastyPieModel extends Backbone.Model
   idAttribute: 'resource_uri'
 
   url: ->
-    if @id then return @id
+    if @id? then return @id
 
-    url = Backbone.Model.prototype.url.call @
-
-    if url[url.length-1] != '/'
-      url = url + '/'
-
-    url
+    Backbone.Model.prototype.url.call @
 
   @factory: (endpoint, bone) ->
     # Creates a nested class which accesses the given endpoint. I know. It's weird.
