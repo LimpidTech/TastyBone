@@ -9,6 +9,8 @@
 *.egg-info
 dist
 build
+include
+lib
 eggs
 parts
 bin
