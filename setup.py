@@ -24,7 +24,7 @@ for filename in metafiles:
 
 metadata = {
     'name': 'tastybone',
-    'version': '0.0.3',
+    'version': '0.0.4',
     'description': 'Expose TastyPie to your client. Nicely.',
     'long_description': metafiles['README.md'] + '\n\n' + metafiles['CHANGES.md'],
     'classifiers': metafiles['CLASSIFIERS.txt'],
@@ -35,6 +35,8 @@ metadata = {
     'packages': ['tastybone'],
     'package_data': {
         'tastybone': [
+            'api.py',
+            '__init__.py',
             'static/scripts/tastybone.js',
             'static/scripts/tastybone.min.js',
         ]
